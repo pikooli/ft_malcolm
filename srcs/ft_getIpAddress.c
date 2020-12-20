@@ -1,6 +1,6 @@
 #include "main.h"
 
-char * getIpAddress()
+char * ft_getIpAddress()
 {
     struct ifaddrs *ifap, *ifa;
     struct sockaddr_in *sa;
@@ -15,8 +15,9 @@ char * getIpAddress()
             addr = inet_ntoa(sa->sin_addr);
             if (ft_strcmp(ifa->ifa_name,"lo")){
                 ret = ft_strdup(addr);
+                ft_putcolor("yellow");
                 printf("Your interface is: %s\t Your ip address is: %s\n", ifa->ifa_name, addr);
-
+                ft_putcolor("");
             }
         }
     }

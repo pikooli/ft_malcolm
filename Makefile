@@ -1,8 +1,25 @@
-all : 
-	gcc srcs/main.c srcs/Utils/ft_strdup.c srcs/Utils/getIpAddress.c srcs/Utils/ft_strcmp.c  test.c -I include
+NAME = ft_malcolm
 
-client : 
-	gcc srcs/client.c -I include -o client
+CC = gcc
 
-server : 
-	gcc srcs/server.c -I include -o server 
+LIBFT_DIRECTORY = ./libft/
+
+LIBFT = $(LIBFT_DIRECTORY)libft.a
+
+LIBRARIES = $(LIBFT)
+
+INCLUDES = -I ./includes
+
+
+
+all : $(LIBFT)
+	$(CC) $(LIBRARIES) $(INCLUDES) ./main.c srcs/*
+
+$(LIBFT) :
+	@$(MAKE) -sC $(LIBFT_DIRECTORY)
+clean:
+	@$(MAKE) -sC $(LIBFT_DIRECTORY) clean
+	
+
+fclean: clean
+	@$(MAKE) -sC $(LIBFT_DIRECTORY) fclean
