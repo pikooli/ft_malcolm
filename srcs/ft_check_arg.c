@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:32:53 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 19:43:55 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/20 22:21:40 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int	ft_check_mac(char *mac)
 {
 	char	**tab;
 	int		i;
-	int		num;
 
 	i = 0;
 	if (mac == NULL || (tab = ft_split(mac, ':')) == NULL)
@@ -75,12 +74,12 @@ int	ft_check_arg(int ac, char **av)
 		"source ip, source mac address, dest ip, dest mac address\n"));
 	}
 	if (!ft_check_ip(av[1]))
-		return (ft_print_error("it source ip is not valid"));
+		return (ft_print_error("source ip is not valid"));
 	if (!ft_check_mac(av[2]))
-		return (ft_print_error("it source mac address is not valid"));
+		return (ft_print_error("source mac address is not valid"));
 	if (!ft_check_ip(av[3]))
-		return (ft_print_error("it dest ip is not valid"));
+		return (ft_print_error("dest ip is not valid"));
 	if (!ft_check_mac(av[4]))
-		return (ft_print_error("it dest mac address is not valid"));
+		return (ft_print_error("dest mac address is not valid"));
 	return (0);
 }

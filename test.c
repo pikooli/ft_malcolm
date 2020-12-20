@@ -1,9 +1,10 @@
 #include "main.h"
-
+#include <stdio.h>
 
 int main()
 {                
-	ft_putcolor(1);
+	ft_putcolor("green");
 	printf("test\n");
-	ft_putcolor(0);
+	printf("%d\n",ft_ishexa(0));
+	ft_putcolor("");
 }

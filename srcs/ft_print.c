@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_print.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/20 21:11:48 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 21:29:49 by pascal           ###   ########.fr       */
+/*   Created: 2020/12/20 21:29:18 by pascal            #+#    #+#             */
+/*   Updated: 2020/12/20 21:31:16 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int ft_print_error(char *str)
+void	ft_print(char *str)
 {
-    ft_putcolor("red");
+	ft_putcolor("green");
     printf("%s\n", str);
     ft_putcolor("");
-
-    return (1);
 }

@@ -1,6 +1,6 @@
 NAME = ft_malcolm
 
-CC = gcc
+CC = gcc -Wall -Werror -Wextra
 
 LIBFT_DIRECTORY = ./libft/
 
@@ -12,8 +12,12 @@ INCLUDES = -I ./includes
 
 
 
-all : $(LIBFT)
-	$(CC) $(LIBRARIES) $(INCLUDES) ./main.c srcs/*
+all : 
+	clear
+	$(CC) $(INCLUDES) ./main.c srcs/* ./libft/*
+
+test : 
+	./a.out 1.168.1.46  ff:bb:ff:ff:ee:1a  15.15.15.54 ff:bb:ff:ff:ee:aa
 
 $(LIBFT) :
 	@$(MAKE) -sC $(LIBFT_DIRECTORY)
