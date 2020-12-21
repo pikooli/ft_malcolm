@@ -90,7 +90,7 @@ LIBFT = \
 	ft_strlcpy.c\
 	ft_tolower.c
 
-LIBFTS = $(addprefix ./libft/,$(LIBFT))
+LIBFTS = $(addprefix ./srcs/libft/,$(LIBFT))
 
 LIBFTOBJS = ${LIBFTS:.c=.o}
 

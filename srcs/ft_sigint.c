@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:17:13 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 21:43:23 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 02:40:17 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 void ft_sigint()
 {
-	if (mim.socket == -1)
+	if (g_mim.socket == -1)
 		return ;
 
-	close(mim.socket);
-	if (mim.buffer)
-		free(mim.buffer);
+	close(g_mim.socket);
+	if (g_mim.buffer)
+		free(g_mim.buffer);
 	exit(0);
 }
