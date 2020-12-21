@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:11:40 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 21:42:07 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 00:02:40 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void    ft_getIpAddress()
             addr = inet_ntoa(sa->sin_addr);
             if (ft_strcmp(ifa->ifa_name,"lo")){
                 ft_putcolor("yellow");
-                printf("Your interface is: %s\t Your ip address is: %s\n", ifa->ifa_name, addr);
+                printf("Your interface is: %s\nYour ip address is: %s\n", ifa->ifa_name, addr);
                 ft_putcolor("");
             }
         }

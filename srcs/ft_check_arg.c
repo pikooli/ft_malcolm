@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 17:32:53 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 22:21:40 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 01:51:36 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,15 +71,15 @@ int	ft_check_arg(int ac, char **av)
 	{
 		ft_print_error("No valid number of argument, argument should be :");
 		return (ft_print_error(\
-		"source ip, source mac address, dest ip, dest mac address\n"));
+		"'src_ip src_mac dest_ip dest_mac'"));
 	}
 	if (!ft_check_ip(av[1]))
-		return (ft_print_error("source ip is not valid"));
+		return (ft_print_error("source ip is not valid : 'src_ip src_mac dest_ip dest_mac'"));
 	if (!ft_check_mac(av[2]))
-		return (ft_print_error("source mac address is not valid"));
+		return (ft_print_error("source mac address is not valid : 'src_ip src_mac dest_ip dest_mac'"));
 	if (!ft_check_ip(av[3]))
-		return (ft_print_error("dest ip is not valid"));
+		return (ft_print_error("dest ip is not valid : 'src_ip src_mac dest_ip dest_mac'"));
 	if (!ft_check_mac(av[4]))
-		return (ft_print_error("dest mac address is not valid"));
+		return (ft_print_error("dest mac address is not valid : 'src_ip src_mac dest_ip dest_mac'"));
 	return (0);
 }

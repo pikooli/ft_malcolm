@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:45:39 by paszhang          #+#    #+#             */
-/*   Updated: 2020/12/20 19:28:20 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 00:30:51 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,9 @@ void			ft_putcolor(char *color);
 int				ft_free_tab(char **tab);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_ishexa(char c);
+char			*ft_strcpy(char *dest, const char *src);
+int				ft_atoi_base(char *str, char *base);
+
 /*
 **		printf
 */
