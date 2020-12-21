@@ -6,17 +6,16 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:11:48 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/20 21:29:49 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 03:12:18 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "main.h"
 
-int ft_print_error(char *str)
+int	ft_print_error(char *str)
 {
-    ft_putcolor("red");
-    printf("%s\n", str);
-    ft_putcolor("");
-
-    return (1);
+	ft_putcolor("red");
+	printf("%s\n", str);
+	ft_putcolor("");
+	return (1);
 }

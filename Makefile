@@ -10,7 +10,7 @@ SRC = \
 	ft_check_arg.c\
 	ft_compare.c\
 	ft_error.c\
-	ft_getIpAddress.c\
+	ft_getipaddress.c\
 	ft_loop.c\
 	ft_mim.c\
 	ft_print.c\
