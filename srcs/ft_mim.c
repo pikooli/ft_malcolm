@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:11:28 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/21 03:39:01 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 11:30:53 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void	ft_prepare_socketaddr(void)
 
 int		ft_mim(void)
 {
-
 	ft_print("------------- Min going to proceed -------------");
 	signal(SIGINT, ft_sigint);
 	g_mim.socket = socket(AF_PACKET, SOCK_RAW, htons(ETH_P_ALL));

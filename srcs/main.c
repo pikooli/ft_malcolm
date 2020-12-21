@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:11:37 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/21 03:09:40 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 10:39:50 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	ft_prepare_ip(char *ip, unsigned char tab[4])
 	i = -1;
 	while (tmp[++i])
 		tab[i] = ft_atoi(tmp[i]);
+	ft_free_tab(tmp);
 	return (0);
 }
 
@@ -41,6 +42,7 @@ int	ft_prepare_mac(char *mac, unsigned char tab[6])
 			tmp[i][a] = ft_tolower(tmp[i][a]);
 		tab[i] = ft_atoi_base(tmp[i], "0123456789abcdef");
 	}
+	ft_free_tab(tmp);
 	return (0);
 }
 

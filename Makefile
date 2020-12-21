@@ -119,11 +119,20 @@ arp :
 arptest : 
 	./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 00:1e:73:78:ff:0d
 
+vtest : 
+	valgrind --leak-check=yes ./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 00:1e:73:78:ff:0d
+
 fake : 
 	./ft_malcolm toto  tata titi tutu 
 	./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 
 	./ft_malcolm 192.168.1.46  14:7d:da:9a:97:  192.168.1.38 00:1e:73:78:ff:0d
 	./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 00:1e:73:78:ff:
+	
+vfake : 
+	valgrind --leak-check=yes ./ft_malcolm toto  tata titi tutu 
+	valgrind --leak-check=yes ./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 
+	valgrind --leak-check=yes ./ft_malcolm 192.168.1.46  14:7d:da:9a:97:  192.168.1.38 00:1e:73:78:ff:0d
+	valgrind --leak-check=yes ./ft_malcolm 192.168.1.46  14:7d:da:9a:97:f9  192.168.1.38 00:1e:73:78:ff:
 
 $(LIBFT) :
 	@$(MAKE) -sC $(LIBFT_DIRECTORY)

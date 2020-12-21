@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 21:17:13 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/21 03:43:57 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 11:30:45 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ void	ft_sigint(int i)
 		free(g_mim.buffer);
 	ft_printcolor("Closing MIM", "red");
 	i = getuid();
-	kill(i, SIGQUIT);	
+	kill(i, SIGQUIT);
 }

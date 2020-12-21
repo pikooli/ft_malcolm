@@ -6,7 +6,7 @@
 /*   By: pascal <pascal@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/20 23:38:58 by pascal            #+#    #+#             */
-/*   Updated: 2020/12/21 03:46:21 by pascal           ###   ########.fr       */
+/*   Updated: 2020/12/21 11:29:47 by pascal           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,11 +68,8 @@ int		ft_send(void)
 	sent = sendto(g_mim.socket, g_mim.buffer, BUF_SIZE, 0,
 	(struct sockaddr *)&g_mim.socket_addr, sizeof(g_mim.socket_addr));
 	ft_printcolor("\n************* RESPONSE IS SEND *************\n", "red");
-	free(mim.buffer);
+	free(g_mim.buffer);
 	if (sent == -1)
-	{
-		perror("sendto():");
-		return (1);
-	}
+		return (ft_print_error("Error in sendto"));
 	return (0);
 }
